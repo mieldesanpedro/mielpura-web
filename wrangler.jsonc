@@ -1,0 +1,13 @@
+{
+  // Sitio estático de Miel Pura, servido como Worker de solo assets.
+  // Deploy:  npx wrangler deploy
+  "name": "mielpura-web",
+  "compatibility_date": "2026-06-19",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./site"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

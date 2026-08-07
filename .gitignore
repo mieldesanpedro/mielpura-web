@@ -8,3 +8,10 @@ Thumbs.db
 # Editor
 .vscode/
 .idea/
+
+# Wrangler / Cloudflare
+.wrangler/
+
+# Material fuente (fotos y videos originales de WhatsApp, ~11 MB)
+# Los assets ya optimizados que usa el sitio viven en site/assets/
+web_data/

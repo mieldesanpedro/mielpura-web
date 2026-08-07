@@ -44,6 +44,25 @@
     revealTargets.forEach(el => el.classList.add('is-visible'));
   }
 
+  // Meta Pixel · evento Contact al ir a WhatsApp
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href*="wa.me"]');
+    if (!link || typeof window.fbq !== 'function') return;
+
+    // Etiqueta para distinguir qué botón se usó en el Administrador de Anuncios
+    const card = link.closest('.card');
+    const label =
+      (card && card.querySelector('h3') && card.querySelector('h3').textContent.trim()) ||
+      link.getAttribute('aria-label') ||
+      link.textContent.trim() ||
+      'WhatsApp';
+
+    window.fbq('track', 'Contact', {
+      content_name: label,
+      content_category: 'WhatsApp'
+    });
+  });
+
   // Pausar videos fuera de viewport (autoplay friendly)
   const videos = document.querySelectorAll('video');
   if ('IntersectionObserver' in window && videos.length) {
