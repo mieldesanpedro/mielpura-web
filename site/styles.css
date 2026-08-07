@@ -686,6 +686,16 @@ a { color: inherit; text-decoration: none; }
   margin: 24px 0;
 }
 .legal__callout p { margin: 0; color: var(--c-text); }
+.legal__callout p + p,
+.legal__callout ul { margin-top: 10px; }
+.legal__callout ul { margin-bottom: 0; }
+.legal__body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  background: var(--c-bg-alt);
+  border-radius: 4px;
+  padding: 1px 5px;
+}
 .legal__back {
   display: inline-flex;
   align-items: center;
